@@ -16,6 +16,15 @@ class userController {
             msg: "Tickets are now available for purchase!"
         })
     }
+    static getTickets = async (req, res) => {
+        const { date, source, destination } = req.params
+        const tickets = await ticket_model.find({
+            date,
+            source,
+            destination
+        })
+        res.status(200).json(tickets)
+    }
 }
 
 module.exports = userController
