@@ -13,6 +13,18 @@ const ticketsellSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    _class: {
+        type: String,
+        required: true
+    },
+    fare: {
+        type: Number,
+        required: true
+    },
+    quota: {
+        type: String,
+        required: true
+    },
     date: {
         type: String,
         required: true
